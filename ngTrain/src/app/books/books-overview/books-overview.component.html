@@ -1,0 +1,16 @@
+<table mdbTable hover="true">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Autor</th>
+      <th>Titutlo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let book of bookList">
+      <td>{{book.ID}}</td>
+      <td>{{book.Autor}}</td>
+      <td>{{book.Titutlo}}</td>
+    </tr>
+  </tbody>
+</table>
