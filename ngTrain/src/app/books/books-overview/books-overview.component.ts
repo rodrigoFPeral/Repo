@@ -8,10 +8,12 @@ import { BookFactory } from '../book-factory';
   styleUrls: ['./books-overview.component.css']
 })
 export class BooksOverviewComponent implements OnInit {
-
+  libro1: Book;
   bookList: Book[];
 
-  constructor() { }
+  constructor() {
+    this.bookList = new Array<Book>();
+   }
 
   ngOnInit() {
     this.bookList = BookFactory.createBooks();
