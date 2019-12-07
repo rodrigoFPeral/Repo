@@ -10,6 +10,7 @@ import { BookFactory } from '../book-factory';
 export class BooksOverviewComponent implements OnInit {
   libro1: Book;
   bookList: Book[];
+  selectedBook: Book;
 
   constructor() {
     this.bookList = new Array<Book>();
@@ -17,6 +18,10 @@ export class BooksOverviewComponent implements OnInit {
 
   ngOnInit() {
     this.bookList = BookFactory.createBooks();
+  }
+
+  isSelectedBook(book: Book) {
+    return this.selectedBook === book;
   }
 
 }
